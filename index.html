@@ -1,241 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Deepak Sharma | Graphic Designer</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', sans-serif; background: #0f0f0f; color: #fff; }
-
-    header {
-      background: linear-gradient(135deg, #1a1a2e, #16213e);
-      text-align: center;
-      padding: 80px 20px;
-    }
-    header h1 { font-size: 3em; color: #e94560; }
-    header p { font-size: 1.2em; color: #aaa; margin-top: 10px; }
-
-    .about {
-      text-align: center;
-      padding: 60px 20px;
-      background: #1a1a1a;
-    }
-    .about h2 { color: #e94560; margin-bottom: 15px; }
-    .about p { color: #ccc; max-width: 600px; margin: auto; line-height: 1.8; }
-
-    .services {
-      padding: 60px 20px;
-      text-align: center;
-      background: #111;
-    }
-    .services h2 { color: #e94560; margin-bottom: 30px; }
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .card {
-      background: #1e1e2e;
-      border-radius: 12px;
-      padding: 30px;
-      width: 200px;
-      font-size: 1em;
-      color: #ccc;
-    }
-    .card span { font-size: 2em; display: block; margin-bottom: 10px; }
-
-    /* SKILLS SECTION */
-    .skills {
-      padding: 60px 20px;
-      text-align: center;
-      background: #1a1a2e;
-    }
-    .skills h2 { color: #e94560; margin-bottom: 30px; }
-    .skill-item {
-      max-width: 600px;
-      margin: 12px auto;
-      text-align: left;
-    }
-    .skill-item p { color: #ccc; margin-bottom: 6px; }
-    .skill-bar {
-      background: #333;
-      border-radius: 10px;
-      height: 12px;
-      width: 100%;
-    }
-    .skill-fill {
-      height: 12px;
-      border-radius: 10px;
-      background: linear-gradient(90deg, #e94560, #f5a623);
-    }
-
-    /* PORTFOLIO SECTION */
-    .portfolio {
-      padding: 60px 20px;
-      text-align: center;
-      background: #111;
-    }
-    .portfolio h2 { color: #e94560; margin-bottom: 10px; }
-    .portfolio p.subtitle { color: #888; margin-bottom: 30px; font-size: 0.95em; }
-    .portfolio-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .portfolio-item {
-      background: #1e1e2e;
-      border-radius: 12px;
-      width: 280px;
-      overflow: hidden;
-      transition: transform 0.3s;
-    }
-    .portfolio-item:hover { transform: scale(1.03); }
-    .portfolio-item .placeholder {
-      width: 100%;
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3em;
-      background: linear-gradient(135deg, #1a1a2e, #16213e);
-    }
-    .portfolio-item p {
-      padding: 15px;
-      color: #ccc;
-      font-size: 0.95em;
-    }
-
-    /* CONTACT SECTION */
-    .contact {
-      text-align: center;
-      padding: 60px 20px;
-      background: #1a1a2e;
-    }
-    .contact h2 { color: #e94560; margin-bottom: 15px; }
-    .contact p { color: #aaa; margin-bottom: 20px; }
-    .btn-email {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 30px;
-      background: #e94560;
-      color: white;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .btn-whatsapp {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 30px;
-      background: #25D366;
-      color: white;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .btn-whatsapp:hover { background: #1ebe5d; }
-    .btn-email:hover { background: #c73652; }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #0f0f0f;
-      color: #555;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- HEADER -->
-  <header>
-    <h1>Deepak Sharma</h1>
-    <p>🎨 Graphic Designer | Logo • Poster • Social Media • UI</p>
-  </header>
-
-  <!-- ABOUT -->
-  <section class="about">
-    <h2>About Me</h2>
-    <p>
-      Hi! I'm Deepak Sharma, a passionate Graphic Designer based in India.
-      I create stunning visuals that bring brands to life —
-      from logos and posters to social media content and web UI.
-    </p>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="services">
-    <h2>My Services</h2>
-    <div class="cards">
-      <div class="card"><span>🎯</span>Logo Design</div>
-      <div class="card"><span>🖼️</span>Poster & Banner</div>
-      <div class="card"><span>📱</span>Social Media Posts</div>
-      <div class="card"><span>💻</span>Web Design / UI</div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section class="skills">
-    <h2>Experience & Skills</h2>
-    <div class="skill-item">
-      <p>🎨 Logo Design</p>
-      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-    </div>
-    <div class="skill-item">
-      <p>🖼️ Poster & Banner</p>
-      <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
-    </div>
-    <div class="skill-item">
-      <p>📱 Social Media Design</p>
-      <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
-    </div>
-    <div class="skill-item">
-      <p>💻 Web Design / UI</p>
-      <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
-    </div>
-    <div class="skill-item">
-      <p>🖥️ Adobe Photoshop</p>
-      <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
-    </div>
-    <div class="skill-item">
-      <p>✏️ Adobe Illustrator</p>
-      <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO -->
-  <section class="portfolio">
-    <h2>My Work</h2>
-    <p class="subtitle">अपने design images यहाँ add करें</p>
-    <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <div class="placeholder">🎯</div>
-        <p>Logo Design Project</p>
-      </div>
-      <div class="portfolio-item">
-        <div class="placeholder">🖼️</div>
-        <p>Poster Design Project</p>
-      </div>
-      <div class="portfolio-item">
-        <div class="placeholder">📱</div>
-        <p>Social Media Campaign</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <p>काम करवाना है? मुझसे संपर्क करें!</p>
-    <a class="btn-email" href="mailto:youremail@gmail.com">📧 Email करें</a>
-    <a class="btn-whatsapp" href="https://wa.me/91XXXXXXXXXX" target="_blank">💬 WhatsApp करें</a>
-  </section>
-
-  <footer>
-    <p>© 2025 Deepak Sharma | All Rights Reserved</p>
-  </footer>
-
-</body>
-</html>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Deepak Sharma | Book Cover Designer</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0a0805;
+  --paper:#faf6ef;
+  --gold:#c9922a;
+  --gold2:#e8b84b;
+  --red:#b83227;
+  --cream:#f0e8d5;
+  --muted:#7a6e62;
+}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+nav{
+  position:fixed;top:0;width:100%;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 48px;
+  background:rgba(10,8,5,0.0);
+  transition:background 0.4s,padding 0.4s;
+}
+nav.scrolled{background:rgba(10,8,5,0.95);backdrop-filter:blur(12px);padding:12px 48px}
+.logo{font-family:'Playfair Display',serif;font-size:1.25rem;letter-spacing:0.5px;color:var(--paper)}
+.logo span{color:var(--gold)}
+.nav-links a{color:rgba(250,246,239,0.55);text-decoration:none;font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;margin-left:36px;transition:color 0.25s}
+.nav-links a:hover{color:var(--gold2)}
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:0 48px;gap:0;position:relative;overflow:hidden}
+.hero-left{positio
