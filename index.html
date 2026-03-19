@@ -31,4 +31,297 @@ nav.scrolled{background:rgba(10,8,5,0.95);backdrop-filter:blur(12px);padding:12p
 .nav-links a{color:rgba(250,246,239,0.55);text-decoration:none;font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;margin-left:36px;transition:color 0.25s}
 .nav-links a:hover{color:var(--gold2)}
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:0 48px;gap:0;position:relative;overflow:hidden}
-.hero-left{positio
+.hero-left{position:relative;z-index:2;padding:120px 60px 80px 0}
+.bg-word{position:absolute;font-family:'Playfair Display',serif;font-size:28vw;font-weight:900;color:rgba(201,146,42,0.04);top:50%;left:-5%;transform:translateY(-50%);pointer-events:none;white-space:nowrap;line-height:1;letter-spacing:-10px}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(201,146,42,0.12);border:1px solid rgba(201,146,42,0.3);color:var(--gold2);font-size:0.7rem;letter-spacing:2.5px;text-transform:uppercase;padding:7px 16px;border-radius:2px;margin-bottom:28px;animation:fadeUp 0.7s ease both}
+.tag-dot{width:5px;height:5px;border-radius:50%;background:var(--gold2);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.7)}}
+.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,5.5vw,5.2rem);font-weight:900;line-height:1.02;letter-spacing:-1px;animation:fadeUp 0.8s ease 0.1s both}
+.hero-h1 .line2{-webkit-text-stroke:1px var(--gold);color:transparent;display:block}
+.hero-h1 .line3{color:var(--gold2);display:block}
+.hero-sub{margin-top:22px;font-size:0.95rem;line-height:1.8;color:rgba(250,246,239,0.55);max-width:440px;animation:fadeUp 0.9s ease 0.2s both}
+.hero-divider{margin:32px 0;display:flex;align-items:center;gap:16px;animation:fadeUp 1s ease 0.3s both}
+.hero-divider::before{content:'';flex:1;max-width:50px;height:1px;background:var(--gold);opacity:0.5}
+.hero-divider-text{font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
+.hero-stats{display:flex;gap:36px;animation:fadeUp 1s ease 0.35s both;margin-bottom:36px}
+.hstat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--gold2);line-height:1}
+.hstat-label{font-size:0.7rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp 1s ease 0.45s both}
+.btn{padding:13px 30px;font-size:0.8rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border-radius:2px;transition:all 0.3s;cursor:pointer;border:none}
+.btn-gold{background:var(--gold);color:#000}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,146,42,0.3)}
+.btn-outline{border:1px solid rgba(250,246,239,0.2);color:var(--paper);background:transparent}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.hero-right{position:relative;z-index:2;height:100vh;display:flex;align-items:center;justify-content:center}
+.book-stack{position:relative;width:280px;height:480px}
+.book{position:absolute;border-radius:3px;overflow:hidden;box-shadow:6px 6px 30px rgba(0,0,0,0.6),2px 2px 8px rgba(0,0,0,0.4);transition:transform 0.5s ease,box-shadow 0.5s ease}
+.book img{width:100%;height:100%;object-fit:cover;display:block}
+.b1{width:170px;height:230px;top:40px;left:20px;transform:rotate(-6deg);z-index:3;animation:floatIn 0.7s ease 0.1s both}
+.b2{width:165px;height:225px;top:30px;left:80px;transform:rotate(4deg);z-index:2;animation:floatIn 0.7s ease 0.2s both}
+.b3{width:160px;height:218px;top:60px;left:140px;transform:rotate(-2deg);z-index:1;animation:floatIn 0.7s ease 0.3s both}
+.b4{width:172px;height:232px;top:200px;left:10px;transform:rotate(5deg);z-index:3;animation:floatIn 0.7s ease 0.4s both}
+.b5{width:168px;height:228px;top:195px;left:70px;transform:rotate(-3deg);z-index:2;animation:floatIn 0.7s ease 0.5s both}
+.b6{width:163px;height:222px;top:210px;left:130px;transform:rotate(6deg);z-index:1;animation:floatIn 0.7s ease 0.6s both}
+.b-feature{position:absolute;width:200px;height:278px;bottom:-20px;left:50%;transform:translateX(-50%) rotate(-1deg);z-index:10;border-radius:3px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,0.8),0 8px 20px rgba(0,0,0,0.5),inset -3px 0 8px rgba(0,0,0,0.3);animation:floatIn 0.9s ease 0.7s both}
+.b-feature img{width:100%;height:100%;object-fit:cover;display:block}
+.b-feature::before{content:'';position:absolute;left:0;top:0;width:14px;height:100%;background:linear-gradient(to right,rgba(0,0,0,0.5),transparent);z-index:1}
+.book-stack:hover .b1{transform:rotate(-10deg) translate(-12px,-8px)}
+.book-stack:hover .b2{transform:rotate(8deg) translate(0,-12px)}
+.book-stack:hover .b3{transform:rotate(-4deg) translate(14px,-6px)}
+.book-stack:hover .b4{transform:rotate(9deg) translate(-14px,6px)}
+.book-stack:hover .b5{transform:rotate(-5deg) translate(0,8px)}
+.book-stack:hover .b6{transform:rotate(10deg) translate(16px,4px)}
+.book-stack:hover .b-feature{transform:translateX(-50%) rotate(-1deg) translateY(-12px);box-shadow:0 36px 80px rgba(0,0,0,0.85),0 12px 28px rgba(0,0,0,0.5)}
+.book-glow{position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(201,146,42,0.15) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.vert-label{position:absolute;right:-60px;top:50%;transform:translateY(-50%) rotate(90deg);font-size:0.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.marquee-wrap{border-top:1px solid rgba(201,146,42,0.2);border-bottom:1px solid rgba(201,146,42,0.2);background:rgba(201,146,42,0.05);overflow:hidden;padding:12px 0;position:relative;z-index:5}
+.marquee-track{display:flex;gap:0;white-space:nowrap;animation:scroll 20s linear infinite}
+.marquee-item{display:inline-flex;align-items:center;gap:16px;padding:0 30px;font-size:0.7rem;letter-spacing:2.5px;text-transform:uppercase;color:rgba(201,146,42,0.7)}
+.marquee-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);opacity:0.5}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.about{padding:100px 48px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1200px;margin:0 auto}
+.about-label{font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.about-h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:700;line-height:1.1;margin-bottom:20px}
+.about-p{color:rgba(250,246,239,0.6);font-size:0.95rem;line-height:1.9;margin-bottom:16px}
+.about-skills{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sk{background:rgba(201,146,42,0.06);border:1px solid rgba(201,146,42,0.15);border-radius:2px;padding:18px;transition:border-color 0.3s,transform 0.3s}
+.sk:hover{border-color:var(--gold);transform:translateY(-3px)}
+.sk-icon{font-size:1.3rem;margin-bottom:8px}
+.sk-name{font-size:0.85rem;font-weight:500;margin-bottom:3px}
+.sk-desc{font-size:0.72rem;color:var(--muted)}
+.work{padding:80px 48px;background:rgba(255,255,255,0.02)}
+.work-head{max-width:1200px;margin:0 auto 50px;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px}
+.sec-label{font-size:0.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.sec-h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3vw,2.8rem);font-weight:700;line-height:1}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.fbtn{padding:8px 20px;border-radius:2px;font-size:0.72rem;letter-spacing:1.5px;text-transform:uppercase;border:1px solid rgba(250,246,239,0.15);background:transparent;color:var(--muted);cursor:pointer;transition:all 0.3s}
+.fbtn.active,.fbtn:hover{background:var(--gold);border-color:var(--gold);color:#000}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;max-width:1200px;margin:0 auto}
+.card{position:relative;border-radius:3px;overflow:hidden;background:#111;cursor:pointer;aspect-ratio:3/4;transition:transform 0.4s,box-shadow 0.4s}
+.card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 24px 60px rgba(0,0,0,0.7),0 0 0 1px rgba(201,146,42,0.25)}
+.card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s}
+.card:hover img{transform:scale(1.06)}
+.card-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,8,5,0.9) 0%,rgba(10,8,5,0.2) 50%,transparent 100%);opacity:0;transition:opacity 0.35s;display:flex;flex-direction:column;justify-content:flex-end;padding:18px}
+.card:hover .card-ov{opacity:1}
+.card-title{font-size:0.9rem;font-weight:500;line-height:1.3}
+.card-badge{display:inline-block;background:var(--gold);color:#000;font-size:0.62rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:1px;margin-top:8px}
+.lb{display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.94);backdrop-filter:blur(10px);align-items:center;justify-content:center}
+.lb.open{display:flex}
+.lb img{max-width:88vw;max-height:88vh;object-fit:contain;border-radius:2px}
+.lb-close{position:absolute;top:24px;right:32px;background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;opacity:0.7;transition:opacity 0.2s}
+.lb-close:hover{opacity:1}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);color:#fff;font-size:1.8rem;padding:10px 16px;cursor:pointer;border-radius:2px;transition:background 0.2s}
+.lb-nav:hover{background:rgba(201,146,42,0.3)}
+.lb-prev{left:20px}.lb-next{right:20px}
+.lb-cap{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);font-size:0.8rem;color:rgba(255,255,255,0.6);background:rgba(0,0,0,0.5);padding:7px 18px;border-radius:20px}
+.contact{padding:100px 48px;text-align:center}
+.contact-inner{max-width:680px;margin:0 auto}
+.contact-h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:700;line-height:1.1;margin-bottom:16px}
+.contact-sub{color:var(--muted);font-size:0.95rem;line-height:1.8;margin-bottom:44px}
+.contact-cards{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cc{background:rgba(255,255,255,0.03);border:1px solid rgba(250,246,239,0.1);border-radius:2px;padding:26px 36px;text-decoration:none;color:var(--paper);display:flex;align-items:center;gap:14px;transition:all 0.3s;min-width:200px}
+.cc:hover{border-color:var(--gold);background:rgba(201,146,42,0.07);transform:translateY(-3px)}
+.cc-icon{font-size:1.4rem}
+.cc-label{font-size:0.68rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.cc-val{font-size:0.9rem;font-weight:500;margin-top:3px}
+footer{border-top:1px solid rgba(250,246,239,0.07);text-align:center;padding:28px;font-size:0.75rem;color:var(--muted)}
+footer span{color:var(--gold)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes floatIn{from{opacity:0;transform:translateY(30px) rotate(0deg)}to{opacity:1}}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;padding:80px 24px 40px;text-align:center}
+  .hero-left{padding:0}
+  .hero-stats{justify-content:center}
+  .hero-cta{justify-content:center}
+  .hero-right{height:380px;margin-top:20px}
+  .book-stack{transform:scale(0.8)}
+  .about{grid-template-columns:1fr;gap:40px;padding:60px 24px}
+  .work{padding:60px 24px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  nav{padding:14px 20px}
+  .nav-links{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="logo">DK <span>Sharma</span></div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="bg-word">COVER</div>
+  <div class="hero-left">
+    <div class="hero-tag"><span class="tag-dot"></span>Book Cover Designer</div>
+    <h1 class="hero-h1">
+      Designing Books<br>
+      <span class="line2">That Win</span>
+      <span class="line3">Before Opening.</span>
+    </h1>
+    <p class="hero-sub">
+      Main Deepak Sharma hun — competitive exam books ke liye
+      <strong style="color:var(--paper)">bold, impactful aur professional covers</strong>
+      banata hun. RBD, Khan Global Studies jaise publishers ke saath kaam kar chuka hun.
+    </p>
+    <div class="hero-divider">
+      <span class="hero-divider-text">Mera Kaam Bolata Hai</span>
+    </div>
+    <div class="hero-stats">
+      <div><div class="hstat-num">10+</div><div class="hstat-label">Book Covers</div></div>
+      <div><div class="hstat-num">3+</div><div class="hstat-label">Publishers</div></div>
+      <div><div class="hstat-num">100%</div><div class="hstat-label">Satisfied</div></div>
+    </div>
+    <div class="hero-cta">
+      <a href="#work" class="btn btn-gold">Kaam Dekho</a>
+      <a href="#contact" class="btn btn-outline">Hire Me</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="book-glow"></div>
+    <div class="book-stack">
+      <div class="book b1"><img src="BPSC_Solved_Paper_Cover.jpg" alt=""/></div>
+      <div class="book b2"><img src="Dhurandhar_INDIA_GK_OUT.jpg" alt=""/></div>
+      <div class="book b3"><img src="POCKET_GK.jpg" alt=""/></div>
+      <div class="book b4"><img src="NCERT_1.jpg" alt=""/></div>
+      <div class="book b5"><img src="SSC_GD-Constable_Khan_Sir_2026.jpg" alt=""/></div>
+      <div class="book b6"><img src="UP_Samanya_Gyan.jpg" alt=""/></div>
+      <div class="b-feature"><img src="Jharkhand_Cover4.jpg" alt="Featured"/></div>
+    </div>
+    <div class="vert-label">Portfolio — 2024/25</div>
+  </div>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item"><span class="marquee-dot"></span>Book Cover Design</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Competitive Exam Books</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Adobe Photoshop</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Adobe Illustrator</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Poster Design</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Social Media Graphics</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>RBD Publisher</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Khan Global Studies</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Book Cover Design</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Competitive Exam Books</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Adobe Photoshop</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Adobe Illustrator</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Poster Design</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Social Media Graphics</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>RBD Publisher</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Khan Global Studies</span>
+  </div>
+</div>
+
+<section id="about" class="about">
+  <div>
+    <div class="about-label">Mere Bare Mein</div>
+    <h2 class="about-h2">Ek Cover Jo<br>Bolta Ho</h2>
+    <p class="about-p">Hi! Main Deepak Sharma hun — India ke ek passionate Graphic Designer. Mere designs sirf "cover" nahi hote, ye ek <em>promise</em> hoti hai jo reader ko book kharidte waqt rokti hai.</p>
+    <p class="about-p">BPSC, NCERT X-Ray, SSC GD, State GK series ke liye multiple publishers ke saath kaam kar chuka hun. Har cover ek naya challenge hai — aur main use accept karta hun.</p>
+  </div>
+  <div class="about-skills">
+    <div class="sk"><div class="sk-icon">📖</div><div class="sk-name">Book Cover Design</div><div class="sk-desc">Exam, GK, NCERT series</div></div>
+    <div class="sk"><div class="sk-icon">🎨</div><div class="sk-name">Adobe Photoshop</div><div class="sk-desc">Photo editing & compositing</div></div>
+    <div class="sk"><div class="sk-icon">✏️</div><div class="sk-name">Adobe Illustrator</div><div class="sk-desc">Logo & vector design</div></div>
+    <div class="sk"><div class="sk-icon">📱</div><div class="sk-name">Social Media</div><div class="sk-desc">Instagram, YouTube, FB</div></div>
+  </div>
+</section>
+
+<section id="work" class="work">
+  <div class="work-head">
+    <div>
+      <div class="sec-label">Mera Kaam</div>
+      <h2 class="sec-h2">Selected Projects</h2>
+    </div>
+    <div class="filters">
+      <button class="fbtn active" onclick="filter('all',this)">All</button>
+      <button class="fbtn" onclick="filter('book',this)">Book Covers</button>
+      <button class="fbtn" onclick="filter('ncert',this)">NCERT Series</button>
+      <button class="fbtn" onclick="filter('state',this)">State GK</button>
+    </div>
+  </div>
+  <div class="grid" id="grid">
+    <div class="card" data-c="book state" onclick="lb(0)"><img src="BPSC_Solved_Paper_Cover.jpg" loading="lazy"/><div class="card-ov"><div class="card-title">BPSC Solved Papers</div><span class="card-badge">Book Cover</span></div></div>
+    <div class="card" data-c="book" onclick="lb(1)"><img src="Dhurandhar_INDIA_GK_OUT.jpg" loading="lazy"/><div class="card-ov"><div class="card-title">Dhurandhar India GK</div><span class="card-badge">Book Cover</span></div></div>
+    <div class="card" data-c="book state" onclick="lb(2)"><img src="Jharkhand_Cover4.jpg" loading="lazy"/><div class="card-ov"><div class="card-title">Johar Jharkhand</div><span class="card-badge">Book Cover</span></div></div>
+    <div class="card" data-c="book ncert" onclick="lb(3)"><img src="NCERT_1.jpg" loading="lazy"/><div class="card-ov"><div class="card-title">NCERT X-Ray - Arthshastra</div><span class="card-badge">NCERT Series</span></div></div>
+    <div class="card" data-c="book ncert" onclick="lb(4)"><img src="NCERT_3.jpg" loading="lazy"/><div class="card-ov"><div class="card-title">NCERT X-Ray - Bhugol</div><span class="card-badge">NCERT Series</span></div></div>
+    <div class="card" data-c="book ncert" onclick="lb(5)"><img src="NCERT_4.jpg" loading="lazy"/><div class="card-ov"><div class="card-title">NCERT X-Ray - Rajvyavastha</div><span class="card-badge">NCERT Series</span></div></div>
+    <div class="card" data-c="book ncert" onclick="lb(6)"><img src="NCERT_5.jpg" loading="lazy"/><div class="card-ov"><div class="card-title">NCERT X-Ray - Itihas</div><span class="card-badge">NCERT Series</span></div></div>
+    <div class="card" data-c="book" onclick="lb(7)"><img src="POCKET_GK.jpg" loading="lazy"/><div class="card-ov"><div class="card-title">Pocket GK - Samanya Gyan</div><span class="card-badge">Book Cover</span></div></div>
+    <div class="card" data-c="book" onclick="lb(8)"><img src="SSC_GD-Constable_Khan_Sir_2026.jpg" loading="lazy"/><div class="card-ov"><div class="card-title">SSC GD Constable 2026</div><span class="card-badge">Book Cover</span></div></div>
+    <div class="card" data-c="book state" onclick="lb(9)"><img src="UP_Samanya_Gyan.jpg" loading="lazy"/><div class="card-ov"><div class="card-title">UP Samanya Gyan</div><span class="card-badge">Book Cover</span></div></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="contact-inner">
+    <div class="sec-label" style="text-align:center">Sampark Karein</div>
+    <h2 class="contact-h2">Apni Book Cover<br>Banwaani Hai?</h2>
+    <p class="contact-sub">Book cover, poster ya social media design — koi bhi project ho. Directly WhatsApp ya Email karein. Fast response guaranteed!</p>
+    <div class="contact-cards">
+      <a href="mailto:APNA_EMAIL_YAHAN@gmail.com" class="cc">
+        <span class="cc-icon">📧</span>
+        <div><div class="cc-label">Email</div><div class="cc-val">Email Karein</div></div>
+      </a>
+      <a href="https://wa.me/91APNA_NUMBER_YAHAN" class="cc">
+        <span class="cc-icon">💬</span>
+        <div><div class="cc-label">WhatsApp</div><div class="cc-val">Chat Karein</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2025 <span>Deepak Sharma</span> · Book Cover Designer · All Rights Reserved</footer>
+
+<div class="lb" id="lbox" onclick="lbBg(event)">
+  <button class="lb-close" onclick="lbClose()">&#x2715;</button>
+  <button class="lb-nav lb-prev" onclick="lbNav(-1)">&#x2039;</button>
+  <img id="lbimg" src="" alt=""/>
+  <button class="lb-nav lb-next" onclick="lbNav(1)">&#x203a;</button>
+  <div class="lb-cap" id="lbcap"></div>
+</div>
+
+<script>
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>50));
+const imgs=[
+  {s:'BPSC_Solved_Paper_Cover.jpg',t:'BPSC Solved Papers'},
+  {s:'Dhurandhar_INDIA_GK_OUT.jpg',t:'Dhurandhar India GK'},
+  {s:'Jharkhand_Cover4.jpg',t:'Johar Jharkhand'},
+  {s:'NCERT_1.jpg',t:'NCERT X-Ray - Arthshastra'},
+  {s:'NCERT_3.jpg',t:'NCERT X-Ray - Bhugol'},
+  {s:'NCERT_4.jpg',t:'NCERT X-Ray - Rajvyavastha'},
+  {s:'NCERT_5.jpg',t:'NCERT X-Ray - Itihas'},
+  {s:'POCKET_GK.jpg',t:'Pocket GK - Samanya Gyan'},
+  {s:'SSC_GD-Constable_Khan_Sir_2026.jpg',t:'SSC GD Constable 2026'},
+  {s:'UP_Samanya_Gyan.jpg',t:'UP Samanya Gyan'},
+];
+let cur=0;
+function lb(i){cur=i;document.getElementById('lbimg').src=imgs[i].s;document.getElementById('lbcap').textContent=imgs[i].t+' ('+(i+1)+'/'+imgs.length+')';document.getElementById('lbox').classList.add('open');document.body.style.overflow='hidden'}
+function lbClose(){document.getElementById('lbox').classList.remove('open');document.body.style.overflow=''}
+function lbBg(e){if(e.target===document.getElementById('lbox'))lbClose()}
+function lbNav(d){cur=(cur+d+imgs.length)%imgs.length;lb(cur)}
+document.addEventListener('keydown',e=>{if(!document.getElementById('lbox').classList.contains('open'))return;if(e.key==='ArrowRight')lbNav(1);if(e.key==='ArrowLeft')lbNav(-1);if(e.key==='Escape')lbClose()});
+function filter(cat,btn){
+  document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.card').forEach(c=>{c.style.display=(cat==='all'||c.dataset.c.includes(cat))?'block':'none'});
+}
+</script>
+</body>
+</html>
+```
+
+---
+
+### ⚠️ 2 Cheezein Zaroor Badlo:
+
+Code me ye 2 lines dhundo aur apni real info daalo:
+```
+APNA_EMAIL_YAHAN@gmail.com  →  tumhara asli email
+91APNA_NUMBER_YAHAN         →  91 ke baad tumhara 10 digit number
